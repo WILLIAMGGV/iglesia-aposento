@@ -10,12 +10,15 @@ const Banner = () => {
           backgroundImage: `url(${slider1})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundColor: "black",
           backgroundRepeat: "no-repeat",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           height: "100vh",
-        }}
+          maskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(204, 204, 153, 0) 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(204, 204, 153, 0) 100%)",
+      }}
         class=" w-full h-[400px] sm:h-[400px] md:h-[400px] lg:h-[600px] xl:h-[600px] 2xl:h-[600px] flex flex-col"
       >
         <div

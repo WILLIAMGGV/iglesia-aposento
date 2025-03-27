@@ -236,7 +236,8 @@
 }
 
 .fondoraya {
-  background-image: url("/img/fondoraya.png");
+  /* background-image: url("/img/fondoraya.png"); */
+  background-color: #c0babad7;
   background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
   background-position: center; /* Centra la imagen en el contenedor */
 
@@ -515,7 +516,7 @@ input:checked ~ .accordion-content {
     width: 100%;
 }
 .footer-wave-path {
-    fill: #fffff2;
+    fill: rgb(249 250 251 / var(--tw-bg-opacity, 1));
 }
 
 .footer-content {

@@ -1,7 +1,9 @@
-import Banner from "./components/banner";
+import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import Footer from "./components/footer";
 import logo from "./img/logo2.jpg";
 import service1 from "./img/service1.jpg";
+import Home from "./pages/home";
+import Predica from "./components/predica";
 
 function App() {
   const funcion1 = () => {
@@ -17,7 +19,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="bg-gray-50">
       <header class="header block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
         <nav class="nav container2">
           <div class="nav__data">
@@ -219,7 +221,7 @@ function App() {
               <div
                 id="submenu"
                 onMouseOver={funcion1}
-                class="hidden static flex flex-col place-content-between absolute bg-[#003366] mt-9 text-white w-[300px] h-[300px] rounded-lg border-2 border-white"
+                class="hidden static flex z-50 flex-col place-content-between absolute bg-[#003366] mt-9 text-white w-[300px] h-[300px] rounded-lg border-2 border-white"
               >
                 <div class="m-2 flex flex-col text-white fuente-acumin text-[14px]">
                   <span id="menu1" class="hover:font-bold">
@@ -348,12 +350,15 @@ function App() {
         </div>
       </div>
 
-      <Banner />
-
-      <div id="trasmitir" className="bg-black h-[600px]"></div>
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/predica" element={<Predica />} />
+        </Routes>
+      </HashRouter>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

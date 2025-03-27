@@ -238,7 +238,7 @@ const Footer = () => {
           <div class="footer-copyright-wrapper">
             <p class="footer-copyright-text">
               <a  rel="noopener noreferrer" class="footer-copyright-link text-[18px]" href="/" target="_self">
-                ©2025. | Created by William Godoy | All rights reserved.
+                ©2025. | Elaborado Por William Godoy | Todos los derechos reservados.
               </a>
             </p>
           </div>
