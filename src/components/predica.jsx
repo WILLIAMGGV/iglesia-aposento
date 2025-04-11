@@ -1,12 +1,19 @@
 import React from 'react';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
+import imgfondoraya from '../img/textura.jpg';
 
 const Predica = () => {
   return (
-    <div>
-      <div className="min-h-screen bg-gray-50">
+   
+      <div
+         
+            style={{backgroundImage: `url(${imgfondoraya})`,
+          }}
+            class="fondoraya w-full relative p-8"
+          >
+      <div className="min-h-screen ">
       {/* Header */}
-      <header className="bg-white shadow-sm">
+      <header className="shadow-sm">
         <div className="max-w-5xl mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-gray-900 inline-block px-6 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-gray-200 shadow-sm" style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.1)' }}>Predicaciones</h1>
         </div>

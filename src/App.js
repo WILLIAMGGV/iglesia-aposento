@@ -4,6 +4,8 @@ import logo from "./img/logo2.jpg";
 import service1 from "./img/service1.jpg";
 import Home from "./pages/home";
 import Predica from "./components/predica";
+import Videos from "./components/videos";
+import Books from "./components/books";
 
 function App() {
   const funcion1 = () => {
@@ -225,15 +227,13 @@ function App() {
               >
                 <div class="m-2 flex flex-col text-white fuente-acumin text-[14px]">
                   <span id="menu1" class="hover:font-bold">
-                    <a href="obamacare.html">OBAMACARE</a>
+                    <a href="/">PREDICAS</a>
                   </span>
                   <span id="menu2" class="hover:font-bold">
-                    <a href="medicare.html">MEDICARE</a>
+                    <a href="/">LIBROS</a>
                   </span>
                   <span id="menu3" class="hover:font-bold">
-                    <a href="dentalvision.html">
-                      PLANES DE SEGURO DENTAL Y VISI&Oacute;N
-                    </a>
+                    <a href="/">LA BIBLIA ONLINE</a>
                   </span>
                 </div>
 
@@ -354,6 +354,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/predica" element={<Predica />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/books" element={<Books />} />
         </Routes>
       </HashRouter>
 

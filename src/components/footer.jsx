@@ -30,7 +30,7 @@ const Footer = () => {
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-product"
                 >
-                  <a href="#acercademenu">Pastor: William Godoy</a>
+                  
                 </li>
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-product"
@@ -44,26 +44,26 @@ const Footer = () => {
           </div>
           <div class="footer-content-column">
             <div class="footer-menu">
-              <h2 class="footer-menu-name">Company</h2>
+              <h2 class="footer-menu-name">SITIOS</h2>
               <ul id="menu-company" class="footer-menu-list">
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#contactomenu">Contact</a>
+                  <a href="#contactomenu">Misión y Visión</a>
                 </li>
                 <li
                   class="menu-item menu-item-type-taxonomy menu-item-object-category"
                 >
-                  <a href="#testimonialmenu">Testimonios</a>
+                  <a href="#testimonialmenu">Transmisión en Vivo</a>
                 </li>
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#acercademenu">Acerca de Mi</a>
+                  <a href="#acercademenu">Contacto</a>
                 </li>
               </ul>
             </div>
-            <div class="footer-menu">
+            {/* <div class="footer-menu">
               <h2 class="footer-menu-name">Legal</h2>
               <ul id="menu-legal" class="footer-menu-list">
                 <li
@@ -77,7 +77,7 @@ const Footer = () => {
                   <a href="/">Terms of Use</a>
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
           <div class="footer-content-column">
             <div class="footer-menu">
@@ -93,54 +93,30 @@ const Footer = () => {
                   class="menu-item menu-item-type-custom menu-item-object-custom"
                 >
                   <a rel="noopener noreferrer" href="medicare.html"
-                    >Medicare</a
+                    >Libros</a
                   >
                 </li>
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="dentalvision.html">Planes de Seguro Dental y Visi&oacute;n</a>
+                  <a href="dentalvision.html">La Biblia Online</a>
                 </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                >
-                  <a href="life.html">P&oacute;lizas de Vida</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type_archive menu-item-object-customer"
-                >
-                  <a href="accidental.html">Polizas Accidentales</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                >
-                  <a href="indocument.html">Planes de Descuento para Indocumentados</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                >
-                  <a href="auto.html">P&oacute;lizas de Auto</a>
-                </li>
-                <li
-                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                >
-                  <a href="home.html">P&oacute;lizas de Home</a>
-                </li>
+                
               </ul>
             </div>
           </div>
           <div class="footer-content-column">
             <div class="footer-call-to-action">
-              <h2 class="footer-call-to-action-title">Let's Chat</h2>
+              <h2 class="footer-call-to-action-title">Contactanos</h2>
               <p class="footer-call-to-action-description">
-                Have a support question?
+                Estamos para Atenderte
               </p>
               <a
                 class="footer-call-to-action-button button text-[14px]"
-                href="tel:+9545489316"
+                href="tel:+584126515046"
                 target="_self"
               >
-              <i class="ri-phone-fill"></i> 954-548-9316
+              <i class="ri-phone-fill"></i> +58-412-6515046
               </a>
              
             </div>
