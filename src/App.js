@@ -1,7 +1,7 @@
 import { HashRouter, Route, Routes, Link } from "react-router-dom";
 import Footer from "./components/footer";
 import logo from "./img/logo2.jpg";
-import service1 from "./img/service1.jpg";
+import service1 from "./img/recursos.jpg";
 import Home from "./pages/home";
 import Predica from "./components/predica";
 import Videos from "./components/videos";
@@ -144,7 +144,7 @@ function App() {
 
               <li>
                 <a href="#contactomenu" class="nav__link">
-                  Contact
+                  Contacto
                 </a>
               </li>
 
@@ -227,10 +227,10 @@ function App() {
               >
                 <div class="m-2 flex flex-col text-white fuente-acumin text-[14px]">
                   <span id="menu1" class="hover:font-bold">
-                    <a href="/">PREDICAS</a>
+                    <a href="/#/predica">PREDICAS</a>
                   </span>
                   <span id="menu2" class="hover:font-bold">
-                    <a href="/">LIBROS</a>
+                    <a href="/#/books">LIBROS</a>
                   </span>
                   <span id="menu3" class="hover:font-bold">
                     <a href="/">LA BIBLIA ONLINE</a>
@@ -244,14 +244,9 @@ function App() {
                     class="h-full rounded-r-lg"
                     alt=""
                   />
-                  <div class="absolute fuente-acumin-cursiva w-[100%] h-[80px] bg-opacity-75 text-center mt-[-40px] bg-[#003366] rounded-lg">
+                  <div class="absolute fuente-acumin-cursiva w-[100%] h-[40px] bg-opacity-75 text-center mt-[-40px] bg-[#003366] rounded-lg">
                     <p id="titlesubmenu" class="text-sm p-2 leading-[14px]">
-                      PLANES DE SEGURO DENTAL Y VISI&Oacute;N
-                    </p>
-                    <p id="desmenu" class="text-[10px] p-1 leading-[14px]">
-                      Sonríe con confianza y cuida tus ojos. Nuestros seguros
-                      dentales y de visión te ofrecen una cobertura completa
-                      para mantener tu bienestar bucal y visual.
+                      Contenido de Interes
                     </p>
                   </div>
                 </div>
@@ -265,7 +260,7 @@ function App() {
             </span>
             <span class="p-4 hover:cursor-pointer hover:font-bold">
               <span class="underline2 texto-azul-oscuro">
-                <a href="#contactomenu">Contact</a>
+                <a href="#contactomenu">Contacto</a>
               </span>
             </span>
             <div class="p-4">

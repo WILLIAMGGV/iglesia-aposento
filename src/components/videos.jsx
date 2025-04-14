@@ -6,45 +6,46 @@ import imgfondoraya from '../img/textura.jpg';
 const videos = [
   {
     id: 1,
-    title: "Cómo hacer una paella valenciana",
-    date: "2024-03-15",
-    thumbnail: "https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&q=80&w=500",
+    title: "Que pase lo que tenga que pasar",
+    date: "2025-04-13",
+    thumbnail: "https://img.youtube.com/vi/tkawZEXXhlk/maxresdefault.jpg",
   },
   {
     id: 2,
-    title: "Tutorial de React para principiantes",
+    title: "De Fé y Milagros",
     date: "2024-03-14",
-    thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&q=80&w=500",
+    thumbnail: "https://img.youtube.com/vi/1S2HaeF8EtQ/maxresdefault.jpg",
   },
   {
     id: 3,
-    title: "Viaje por la Costa Brava",
+    title: "Demolición",
     date: "2024-03-13",
-    thumbnail: "https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&fit=crop&q=80&w=500",
+    thumbnail: "https://img.youtube.com/vi/lpfCDwxY66E/maxresdefault.jpg",
   },
   {
     id: 4,
-    title: "Recetas de cocina mediterránea",
+    title: "Intimos Desconocidos",
     date: "2024-03-12",
-    thumbnail: "https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&q=80&w=500",
+    thumbnail: "https://img.youtube.com/vi/J9yArGd5kAk/maxresdefault.jpg",
   },
   {
     id: 5,
-    title: "Guía de Barcelona",
+    title: "Punto Ciego",
     date: "2024-03-11",
-    thumbnail: "https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&q=80&w=500",
+    thumbnail: "https://img.youtube.com/vi/HC6UvU2fS20/maxresdefault.jpg",
   },
   {
     id: 6,
-    title: "Curso de fotografía digital",
+    title: "La Ley del Gallinero",
     date: "2024-03-10",
-    thumbnail: "https://images.unsplash.com/photo-1554048612-b6a482bc67e5?auto=format&fit=crop&q=80&w=500",
+    thumbnail: "https://img.youtube.com/vi/Ln5MT8LPzBk/maxresdefault.jpg",
   }
 ];
 
 function VideoCard({ title, date, thumbnail }) {
   return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-105">
+    <a href="/#/predica">
+    <div className="bg-white rounded-lg cursor-pointer overflow-hidden shadow-lg transition-transform hover:scale-105">
       <div className="relative aspect-video">
         <img 
           src={thumbnail} 
@@ -69,6 +70,7 @@ function VideoCard({ title, date, thumbnail }) {
         </div>
       </div>
     </div>
+    </a>
   );
 }
 

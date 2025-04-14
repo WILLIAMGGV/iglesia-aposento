@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Calendar, Clock, User, Tag } from 'lucide-react';
 import imgfondoraya from '../img/textura.jpg';
+import ReactPlayer from 'react-player';
 
 const Predica = () => {
+  const [urlyoutube, setUrlyoutube] = useState('https://www.youtube.com/watch?v=tkawZEXXhlk')
   return (
    
       <div
@@ -23,13 +25,11 @@ const Predica = () => {
         {/* Video Section */}
         <div className="bg-white rounded-lg shadow-md overflow-hidden mb-8">
           <div className="aspect-w-16 aspect-h-9">
-            <iframe
-              className="w-full h-[400px]"
-              src="https://www.youtube.com/embed/example"
-              title="El Poder de la Fe"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <div>
+                        <div className='bg-[#ccc] border-2 border-red-600 w-full'>
+                        <ReactPlayer style={{borderRadius: '12px'}} url={urlyoutube} loop={true} width="100%" height="500px" light={false} />
+                        </div>
+                      </div>
           </div>
           
           {/* Video Info */}
@@ -39,20 +39,15 @@ const Predica = () => {
             <div className="flex flex-wrap gap-4 text-sm text-gray-600 mb-6">
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2" />
-                <span>15 de Marzo, 2024</span>
+                <span>13 de Abril, 2025</span>
               </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
-                <span>45 minutos</span>
-              </div>
+              
+              
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
-                <span>Pastor Juan Martínez</span>
+                <span>Pastor Dante Gebel</span>
               </div>
-              <div className="flex items-center">
-                <Tag className="w-4 h-4 mr-2" />
-                <span>Fe, Esperanza</span>
-              </div>
+              
             </div>
           </div>
         </div>

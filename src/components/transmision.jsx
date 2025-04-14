@@ -4,7 +4,7 @@ import imgtransmision from "../img/envivo.gif"
 import ReactPlayer from 'react-player'
 
 const Transmision = () => {
-  const [urlyoutube, setUrlyoutube] = useState('https://www.youtube.com/watch?v=zKTSw07mGRQ')
+  const [urlyoutube, setUrlyoutube] = useState('https://www.youtube.com/watch?v=tkawZEXXhlk')
   return (
     <>
       <div

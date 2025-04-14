@@ -5,46 +5,33 @@ import { Download, BookOpen } from 'lucide-react';
 const books = [
   {
     id: 1,
-    title: "Don Quijote de la Mancha",
-    author: "Miguel de Cervantes",
-    thumbnail: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
+    title: "Crecimiento de una Iglesia",
+    author: "David K. Bernand",
+    thumbnail: "https://royalinsurancellc.com/bingo/libro1.jpg",
+    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/Crecimiento_de_una_Iglesia.pdf"
   },
   {
     id: 2,
-    title: "Cien años de soledad",
-    author: "Gabriel García Márquez",
-    thumbnail: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
+    title: "Los Dones Espirituales",
+    author: "David K. Bernand",
+    thumbnail: "https://royalinsurancellc.com/bingo/libro2.jpg",
+    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/los-dones-espirituales.pdf"
   },
   {
     id: 3,
-    title: "La Casa de los Espíritus",
-    author: "Isabel Allende",
-    thumbnail: "https://images.unsplash.com/photo-1532012197267-da84d127e765?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
+    title: "El Despertar de la Gracia",
+    author: "Charles R. Swindoll",
+    thumbnail: "https://royalinsurancellc.com/bingo/libro3.jpg",
+    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/Gracia_sobre_Gracia.pdf"
   },
   {
     id: 4,
-    title: "Rayuela",
-    author: "Julio Cortázar",
-    thumbnail: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
+    title: "En Busca de la Santidad",
+    author: "David K. Bernand",
+    thumbnail: "https://royalinsurancellc.com/bingo/libro4.jpg",
+    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/En%20busca%20de%20la%20santidad.pdf"
   },
-  {
-    id: 5,
-    title: "La Sombra del Viento",
-    author: "Carlos Ruiz Zafón",
-    thumbnail: "https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
-  },
-  {
-    id: 6,
-    title: "Pedro Páramo",
-    author: "Juan Rulfo",
-    thumbnail: "https://images.unsplash.com/photo-1495640388908-05fa85288e61?auto=format&fit=crop&q=80&w=500",
-    downloadUrl: "#"
-  }
+
 ];
 
 
