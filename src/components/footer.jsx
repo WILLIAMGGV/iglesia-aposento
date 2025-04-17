@@ -2,6 +2,14 @@ import React from 'react'
 import logo from '../img/logo.jpg'
 
 const Footer = () => {
+
+
+  const cargapage = (page) => {
+    window.location.href = page;
+    window.location.reload();
+  }
+
+
   return (
     <>
       <div class="pg-footer fuente-acumin text-[18px]">
@@ -49,17 +57,23 @@ const Footer = () => {
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#contactomenu">Misión y Visión</a>
+                  <a style={{cursor: 'pointer'}} onClick={() => {
+                  cargapage("/#/mision");
+                  }}>Misión y Visión</a>
                 </li>
                 <li
                   class="menu-item menu-item-type-taxonomy menu-item-object-category"
                 >
-                  <a href="#testimonialmenu">Transmisión en Vivo</a>
+                  <a style={{cursor: 'pointer'}} onClick={() => {
+                  cargapage("/#/transmision");
+                  }}>Transmisión en Vivo</a>
                 </li>
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="#acercademenu">Contacto</a>
+                  <a style={{cursor: 'pointer'}} onClick={() => {
+                  cargapage("/#/contacto");
+                  }}>Contacto</a>
                 </li>
               </ul>
             </div>
@@ -86,20 +100,24 @@ const Footer = () => {
                 <li
                   class="menu-item menu-item-type-custom menu-item-object-custom"
                 >
-                  <a rel="noopener noreferrer" href="obamacare.html"
+                  <a rel="noopener noreferrer" style={{cursor: 'pointer'}} onClick={() => {
+                  cargapage("/#/videos");
+                  }}
                     >Predicas</a>
                 </li>
                 <li
                   class="menu-item menu-item-type-custom menu-item-object-custom"
                 >
-                  <a rel="noopener noreferrer" href="medicare.html"
+                  <a rel="noopener noreferrer" style={{cursor: 'pointer'}} onClick={() => {
+                  cargapage("/#/books");
+                  }}
                     >Libros</a
                   >
                 </li>
                 <li
                   class="menu-item menu-item-type-post_type menu-item-object-page"
                 >
-                  <a href="dentalvision.html">La Biblia Online</a>
+                  <a href="#">La Biblia Online</a>
                 </li>
                 
               </ul>
@@ -124,7 +142,7 @@ const Footer = () => {
                 
                 
               <div class="flex flex-row mt-0">
-                <a  rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=100083282203525" target="_blank">
+                <a  rel="noopener noreferrer" href="https://www.facebook.com/iglesia.elaposentoalto.1" target="_blank">
                 <div
             class="rounded-full  p-3 m-1 hover:cursor-pointer bg-[#cc9933] hover:bg-[#ffb217] relative"
           >
@@ -148,7 +166,7 @@ const Footer = () => {
             </svg>
           </div></a>
 
-          <a  rel="noopener noreferrer" href="https://www.instagram.com/royalinsuranceusa" target="_blank">
+          <a  rel="noopener noreferrer" href="https://www.facebook.com/iglesia.elaposentoalto.1" target="_blank">
           <div
             class="rounded-full p-3 m-1 hover:cursor-pointer bg-[#cc9933] hover:bg-[#ffb217] relative"
           >
@@ -173,7 +191,7 @@ const Footer = () => {
             </svg>
           </div>
         </a>
-        <a  rel="noopener noreferrer" href="https://wa.me/19545489316" target="_blank">
+        <a  rel="noopener noreferrer" href="https://wa.me/584126515046" target="_blank">
           <div
             class="rounded-full p-3 m-1 hover:cursor-pointer bg-[#cc9933] hover:bg-[#ffb217] relative"
           >

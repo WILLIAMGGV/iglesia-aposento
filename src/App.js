@@ -6,6 +6,8 @@ import Home from "./pages/home";
 import Predica from "./components/predica";
 import Videos from "./components/videos";
 import Books from "./components/books";
+import Transmision from "./components/transmision";
+import Contact from "./components/contact";
 
 function App() {
   const funcion1 = () => {
@@ -18,6 +20,11 @@ function App() {
     console.log("El mouse ha salido del div de servicios");
     document.getElementById("submenu").classList.add("hidden");
     document.getElementById("titleservice").classList.remove("font-bold");
+  };
+
+  const cargapage = (page) => {
+    window.location.href = page;
+    window.location.reload();
   };
 
   return (
@@ -205,7 +212,14 @@ function App() {
 
             <span class="p-4 hover:cursor-pointer hover:font-bold">
               <span class="underline2 texto-azul-oscuro">
-                <a href="#testimonialmenu">Misión y Visión</a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    cargapage("/#/mision");
+                  }}
+                >
+                  Misión y Visión
+                </a>
               </span>
             </span>
             <div
@@ -227,10 +241,24 @@ function App() {
               >
                 <div class="m-2 flex flex-col text-white fuente-acumin text-[14px]">
                   <span id="menu1" class="hover:font-bold">
-                    <a href="/#/predica">PREDICAS</a>
+                    <a
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        cargapage("/#/videos");
+                      }}
+                    >
+                      PREDICAS
+                    </a>
                   </span>
                   <span id="menu2" class="hover:font-bold">
-                    <a href="/#/books">LIBROS</a>
+                    <a
+                      style={{ cursor: "pointer" }}
+                      onClick={() => {
+                        cargapage("/#/books");
+                      }}
+                    >
+                      LIBROS
+                    </a>
                   </span>
                   <span id="menu3" class="hover:font-bold">
                     <a href="/">LA BIBLIA ONLINE</a>
@@ -255,18 +283,32 @@ function App() {
 
             <span class="p-4 hover:cursor-pointer hover:font-bold">
               <span class="underline2 texto-azul-oscuro">
-                <a href="#trasmitir">Transmisión</a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    cargapage("/#/transmision");
+                  }}
+                >
+                  Transmisión
+                </a>
               </span>
             </span>
             <span class="p-4 hover:cursor-pointer hover:font-bold">
               <span class="underline2 texto-azul-oscuro">
-                <a href="#contactomenu">Contacto</a>
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    cargapage("/#/contacto");
+                  }}
+                >
+                  Contacto
+                </a>
               </span>
             </span>
             <div class="p-4">
               <div class="flex flex-row">
                 <a
-                  href="https://www.facebook.com/profile.php?id=100083282203525"
+                  href="https://www.facebook.com/iglesia.elaposentoalto.1"
                   target="_blank"
                 >
                   <div class="rounded-full bg-[#121212] p-3 m-1 hover:cursor-pointer hover:bg-[#cc9933] relative">
@@ -290,7 +332,7 @@ function App() {
                 </a>
 
                 <a
-                  href="https://www.instagram.com/royalinsuranceusa"
+                  href="https://www.facebook.com/iglesia.elaposentoalto.1"
                   target="_blank"
                 >
                   <div class="rounded-full bg-[#121212] p-3 m-1 hover:cursor-pointer hover:bg-[#cc9933] relative">
@@ -314,7 +356,7 @@ function App() {
                   </div>
                 </a>
 
-                <a href="https://wa.me/19545489316" target="_blank">
+                <a href="https://wa.me/584126515046" target="_blank">
                   <div class="rounded-full bg-[#121212] p-3 m-1 hover:cursor-pointer hover:bg-[#cc9933] relative">
                     <div class="absolute inset-0 rounded-full border-2 border-black opacity-0 hover:opacity-100 transition-opacity"></div>
                     <svg
@@ -351,6 +393,8 @@ function App() {
           <Route path="/predica" element={<Predica />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/books" element={<Books />} />
+          <Route path="/contacto" element={<Contact />} />
+          <Route path="/transmision" element={<Transmision />} />
         </Routes>
       </HashRouter>
 

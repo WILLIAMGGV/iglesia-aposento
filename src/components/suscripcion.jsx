@@ -32,7 +32,7 @@ const Suscripcion = () => {
             Mantente informado de nuestros eventos
           </h2>
           <p className="text-lg text-gray-200 mb-8">
-            Suscríbete a nuestro boletín para recibir las últimas actualizaciones y ofertas especiales.
+            Suscríbete a nuestro boletín para recibir las últimas noticias de nuestros eventos.
           </p>
           
           <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 justify-center">

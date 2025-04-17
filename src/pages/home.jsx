@@ -5,6 +5,7 @@ import Carosel from '../components/carosel'
 import Eventos from '../components/eventos'
 import Suscripcion from '../components/suscripcion'
 import Contact from '../components/contact'
+import Card from '../components/card'
 
 const home = () => {
   return (
@@ -18,7 +19,7 @@ const home = () => {
   style={{ gridTemplateRows: "80% 20%", gridTemplateColumns: "2fr 1fr" }}
 >
   <Carosel />
-  <div></div>
+  <Card />
 </div>
 
 <Eventos />

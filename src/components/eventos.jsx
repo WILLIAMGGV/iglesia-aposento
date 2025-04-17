@@ -6,30 +6,30 @@ const Eventos = () => {
     const events = [
         {
           id: 1,
-          title: "Festival de Música en el Parque",
-          date: "2024-03-25",
+          title: "Pastor Elio Mora",
+          date: "2020-06-10",
           time: "16:00",
-          location: "Parque Central",
-          description: "Únete a nosotros para una tarde llena de música en vivo, comida local y actividades para toda la familia. Presentando artistas locales e internacionales en múltiples escenarios.",
-          image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+          location: "Nuestra Sede",
+          description: "Hoy Celebramos a nuestro Padre Celestial su Cumpleaños, que los años que restan sobre esta tierra, siga siendo ejemplo de mucha Fé, de Constancia, de Amor por los otros y por el reino de Dios",
+          image: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Fpastor.jpg?alt=media&token=57260d59-24b9-4ca6-ab3c-da477b68abb1"
         },
         {
           id: 2,
-          title: "Exposición de Arte Contemporáneo",
-          date: "2024-03-28",
+          title: "Clamor por las Damas",
+          date: "2019-11-07",
           time: "19:00",
-          location: "Galería Moderna",
-          description: "Una exposición única que presenta obras de artistas emergentes, explorando temas de sustentabilidad y tecnología a través del arte contemporáneo.",
-          image: "https://images.unsplash.com/photo-1531243269054-5ebf6f34081e"
+          location: "Aposento Alto",
+          description: "Esto fue parte de nuestro Clamor de Mujeres en nuestra casa El Aposento Alto",
+          image: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Fclamor.jpg?alt=media&token=d12d9e75-934e-4d0d-aafc-e9fb0090aa77"
         },
         {
           id: 3,
-          title: "Conferencia de Innovación",
-          date: "2024-04-02",
+          title: "Mentalidad de Reino",
+          date: "2017-06-21",
           time: "10:00",
-          location: "Centro de Convenciones",
-          description: "Descubre las últimas tendencias en tecnología y innovación. Conferencias y talleres con expertos internacionales en IA, blockchain y desarrollo sostenible.",
-          image: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678"
+          location: "Calles de San Francisco",
+          description: "Aposento Alto salió a las calles de la mano de Jesús a bendecir nuestro sector y proclamar libertad en tiempos de crisis. Hijos entendidos haciendo cosas diferentes.",
+          image: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Fmentalidad.jpg?alt=media&token=6651e718-6328-44fb-8f71-347aeafc343f"
         }
       ];
     
@@ -45,11 +45,11 @@ const Eventos = () => {
             {events.map((event) => (
               <div 
                 key={event.id}
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.02] hover:shadow-xl m-4"
+                className="bg-white w-full rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.02] hover:shadow-xl m-4"
               >
                 <div className="relative h-48 sm:h-64">
                   <img
-                    src={`${event.image}?auto=format&fit=crop&w=1200&h=400`}
+                    src={`${event.image}`}
                     alt={event.title}
                     className="w-full h-full object-cover"
                   />

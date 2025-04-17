@@ -50,14 +50,14 @@ const Contact = () => {
             {/* Map */}
             <div className="rounded-lg overflow-hidden shadow-lg h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6752774832497!2d-3.7032786239421897!3d40.41694615484249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287d6da3df33%3A0x6dd69f360f019f35!2sPuerta%20del%20Sol%2C%20Madrid%2C%20Spain!5e0!3m2!1sen!2sus!4v1709669136317!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125513.38899875447!2d-71.7770441509008!3d10.556197596656304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8993babb1ac001%3A0x7fa2acf55507dbd9!2sSan%20Francisco%2C%204004%2C%20Zulia!5e0!3m2!1sen!2sve!4v1744911477254!5m2!1sen!2sve"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Ubicación de la empresa"
+                title="Ubicación de la Iglesia"
                 className="w-full h-full"
               />
             </div>
@@ -101,7 +101,7 @@ const Contact = () => {
                       value={contactForm.phone}
                       onChange={handleInputChange}
                       className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      placeholder="+34 600 000 000"
+                      placeholder="0412-6515046"
                       required
                     />
                   </div>
@@ -143,7 +143,7 @@ const Contact = () => {
                       onChange={handleInputChange}
                       rows={4}
                       className="pl-10 block w-full rounded-lg border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-                      placeholder="Escribe tu mensaje aquí..."
+                      placeholder="Escribe tu petición o motivos de contacto..."
                       required
                     />
                   </div>
@@ -170,15 +170,15 @@ const Contact = () => {
               <div className="mt-8 space-y-4">
                 <div className="flex items-center text-gray-600">
                   <MapPin className="w-5 h-5 mr-2 text-indigo-600" />
-                  <span>Puerta del Sol, 28013 Madrid, España</span>
+                  <span>San Francisco, Maracaibo, Venezuela</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Phone className="w-5 h-5 mr-2 text-indigo-600" />
-                  <span>+34 900 000 000</span>
+                  <span>+58-4126515046</span>
                 </div>
                 <div className="flex items-center text-gray-600">
                   <Mail className="w-5 h-5 mr-2 text-indigo-600" />
-                  <span>contacto@empresa.com</span>
+                  <span>aposentoalto@gmail.com</span>
                 </div>
               </div>
             </div>

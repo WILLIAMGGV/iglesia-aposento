@@ -26,16 +26,16 @@ const Banner = () => {
           class="hidden sm:hidden md:hidden lg:block xl:block 2xl:block ml-[-50%] flex flex-col mt-[50px] animate__animated animate__fadeIn retraso"
         >
           <span class="text-white bg-[#003366] flex flex-col ml-4 p-4 text-xl md:text-4xl fuente-acumin bg-opacity-30 rounded-md">
-            <span>OBAMACARE PARA TI Y TU FAMILIA</span>
+            <span>EL APOSENTO ALTO</span>
             <p
               id="descripcionslider"
               class="text-sm quicksand-medio text-center justify-center animate__animated animate__backInUp retraso2"
             >
-              ¡No esperes más! Obtén Cobertura de Salud Asequible Ahora con
-              Obamacare
+              Se pueden reunir los creyentes
+               para orar juntos y buscar la voluntad de Dios
             </p>
           </span>
-          <a href="obamacare.html">
+          <a href="#">
             {" "}
             <div id="botonc" class="flex flex-row place-content-end">
               <span class="mt-[20px] bg-[#000] p-2 rounded-lg text-sm bg-opacity-70 text-white hover:font-bold cursor-pointer hover:text-gray-900 hover:bg-[#cc9933]">
@@ -58,13 +58,13 @@ const Banner = () => {
           <br />
           <br />
           <span class="text-white bg-[#003366] flex flex-col  p-4 text-xl text-xl fuente-acumin bg-opacity-30 rounded-md">
-            <span>OBAMACARE PARA TI Y TU FAMILIA</span>
+            <span>EL APOSENTO ALTO</span>
             <p
               id="descripcionslider2"
               class="text-sm quicksand-medio text-center justify-center animate__animated animate__backInUp retraso2"
             >
-              ¡No esperes más! Obtén Cobertura de Salud Asequible Ahora con
-              Obamacare
+              Se pueden reunir los creyentes
+              para orar juntos y buscar la voluntad de Dios
             </p>
           </span>
           <div id="botonc2" class="flex flex-row place-content-end">

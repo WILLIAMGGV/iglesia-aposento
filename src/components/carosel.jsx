@@ -7,23 +7,23 @@ const Carosel = () => {
   const images = [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1682687220742-aba19b51f36e",
-      title: "Montañas al atardecer"
+      url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg1.jpg?alt=media&token=522ba86e-9418-4e99-aa2a-0ba275a96423",
+      title: "Nuestra Sede"
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1682687221038-404670bd5121",
-      title: "Lago cristalino"
+      url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg2.jpg?alt=media&token=a19a8985-b53d-41b6-ade1-6470e94b513f",
+      title: "Aniversario"
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1682687220015-4c96261ddd23",
-      title: "Bosque verde"
+      url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg3.jpg?alt=media&token=5dcc2956-ea6c-4887-8d91-4ebe0a286118",
+      title: "Ministerio"
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1682687220199-d0124f48f95b",
-      title: "Playa tropical"
+      url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg4.jpg?alt=media&token=72b23330-5258-4c0b-9b4c-e9661981ac7d",
+      title: "Adoracion"
     }
   ];
 
