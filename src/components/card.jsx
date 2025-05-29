@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = () => {
   return (
-    <div className="min-h-screen flex  justify-center">
+    <div className=" flex  justify-center">
       <div className="flex flex-col items-center max-w-md p-8  rounded-lg shadow-md space-y-4">
         <h2 className="text-2xl font-bold text-gray-300">
           Aniversario #40

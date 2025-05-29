@@ -38,17 +38,17 @@ const books = [
 
 function BookCard({ title, author, thumbnail, downloadUrl }) {
   return (
-    <div className="bg-white rounded-xl overflow-hidden shadow-lg transition-all hover:shadow-xl">
-      <div className="relative aspect-[3/4]">
+    <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all">
+      <div className="relative aspect-[9/12] sm:aspect-[3/4]">
         <img 
           src={thumbnail} 
           alt={title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"/>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
       </div>
-      <div className="p-5">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
+      <div className="p-4 sm:p-5">
+        <h3 className="text-base sm:text-xl font-semibold text-gray-900 mb-2 line-clamp-2">
           {title}
         </h3>
         <div className="flex items-center text-gray-600 mb-4">
@@ -57,7 +57,7 @@ function BookCard({ title, author, thumbnail, downloadUrl }) {
         </div>
         <a
           href={downloadUrl}
-          className="inline-flex items-center justify-center w-full px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors gap-2"
+          className="inline-flex items-center justify-center w-full px-4 py-2 sm:px-4 sm:py-2 text-sm sm:text-base bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors gap-2"
         >
           <Download className="w-4 h-4" />
           <span>Descargar Libro</span>
@@ -72,14 +72,14 @@ function Books() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Biblioteca Digital
           </h1>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-sm sm:text-base">
             Explora nuestra colección de libros clásicos
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {books.map((book) => (
             <BookCard
               key={book.id}
@@ -96,3 +96,5 @@ function Books() {
 }
 
 export default Books;
+
+

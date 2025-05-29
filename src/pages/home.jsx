@@ -15,12 +15,19 @@ const home = () => {
 <Transmision />
 
 <div
-  className="grid gap-0 bg-gray-900"
-  style={{ gridTemplateRows: "80% 20%", gridTemplateColumns: "2fr 1fr" }}
+  className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-1 gap-4 bg-gray-900"
 >
-  <Carosel />
-  <Card />
+  {/* Card primero en móviles, luego a la derecha en md+ */}
+  <div className="order-1 md:order-2 md:col-span-1">
+    <Card />
+  </div>
+
+  {/* Carosel después en móviles, pero a la izquierda en md+ */}
+  <div className="order-2 md:order-1 md:col-span-2">
+    <Carosel />
+  </div>
 </div>
+
 
 <Eventos />
 
