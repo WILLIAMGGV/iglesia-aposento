@@ -6,7 +6,7 @@ const Footer = () => {
 
   const cargapage = (page) => {
     window.location.href = page;
-    window.location.reload();
+   window.scrollTo(0, 0);
   }
 
 
