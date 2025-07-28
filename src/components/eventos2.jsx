@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import imgfondoraya from '../img/fondoraya.png'
 import { Calendar, Clock, MapPin } from 'lucide-react';
 
-const Eventos = () => {
+const Eventos2 = () => {
    
   const [eventos, setEventos] = useState([]);
 
@@ -44,22 +44,33 @@ const Eventos = () => {
   }
 
 
+
   useEffect(() => {
         obtenereventos()
       }, []);
     
-      return (
+      return (<>
+        <div
+              style={{ backgroundImage: `url(${imgfondoraya})` }}
+              className="w-full relative p-4 sm:p-6 md:p-8 bg-cover bg-center"
+            >
+              <div className='block sm:hidden'><br /><br /><br /></div>
+
+              <div className="mx-8 px-2 py-6 cursor-pointer">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-500 inline-block px-4 sm:px-6 py-2 rounded-full bg-gradient-to-r from-blue-50 to-purple-50 border-2 border-gray-200 shadow-sm">
+              Galeria de Imagenes
+            </h1>
+            
+          </div>
         <div
    
-      style={{backgroundImage: `url(${imgfondoraya})`,
-    }}
-      class="fondoraya w-full relative p-8"
+      
+      class=" w-full relative p-8"
     >
         <div className=" py-12 px-4 sm:px-6 lg:px-8">
           <div className=" flex flex-col sm:flex sm:flex-row place-content-center justify-center items-center">
-            {eventos.map((event, index) => (
-              <>
-              {index > 2 ? (<></>) : (<div 
+            {eventos.map((event) => (
+              <div 
                 key={event.ID}
                 className="bg-white w-full rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-[1.02] hover:shadow-xl m-4"
               >
@@ -99,14 +110,14 @@ const Eventos = () => {
                     Ver más detalles
                   </button>
                 </div>
-              </div>)}
-              
-              </>
+              </div>
             ))}
           </div>
         </div>
         </div>
+        </div>
+        </>
   );
 }
 
-export default Eventos
+export default Eventos2

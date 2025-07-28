@@ -1,38 +1,7 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { Download, BookOpen } from 'lucide-react';
 
 // Sample book data
-const books = [
-  {
-    id: 1,
-    title: "Crecimiento de una Iglesia",
-    author: "David K. Bernand",
-    thumbnail: "https://royalinsurancellc.com/bingo/libro1.jpg",
-    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/Crecimiento_de_una_Iglesia.pdf"
-  },
-  {
-    id: 2,
-    title: "Los Dones Espirituales",
-    author: "David K. Bernand",
-    thumbnail: "https://royalinsurancellc.com/bingo/libro2.jpg",
-    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/los-dones-espirituales.pdf"
-  },
-  {
-    id: 3,
-    title: "El Despertar de la Gracia",
-    author: "Charles R. Swindoll",
-    thumbnail: "https://royalinsurancellc.com/bingo/libro3.jpg",
-    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/Gracia_sobre_Gracia.pdf"
-  },
-  {
-    id: 4,
-    title: "En Busca de la Santidad",
-    author: "David K. Bernand",
-    thumbnail: "https://royalinsurancellc.com/bingo/libro4.jpg",
-    downloadUrl: "https://ipuv-cloud.b-cdn.net/ipuv.org/Biblioteca%20Pentecostal/En%20busca%20de%20la%20santidad.pdf"
-  },
-
-];
 
 
 
@@ -57,10 +26,11 @@ function BookCard({ title, author, thumbnail, downloadUrl }) {
         </div>
         <a
           href={downloadUrl}
+          download
           className="inline-flex items-center justify-center w-full px-4 py-2 sm:px-4 sm:py-2 text-sm sm:text-base bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors gap-2"
         >
           <Download className="w-4 h-4" />
-          <span>Descargar Libro</span>
+          <span>Descargar</span>
         </a>
       </div>
     </div>
@@ -68,10 +38,51 @@ function BookCard({ title, author, thumbnail, downloadUrl }) {
 }
 
 function Books() {
+
+const [books, setBooks] = React.useState([]);
+
+const obtenerbooks = async () => {
+
+try {
+    const response = await fetch(`${process.env.REACT_APP_API}/obtenerbooks/`);
+    if (!response.ok) {
+        throw new Error('Error en la red');
+    }
+    const data = await response.json();
+    if(data){
+        setBooks(data);
+    }
+} catch (error) {
+    console.error('Error fetching data:', error);
+}
+
+}
+
+ const obtenerfoto = (foto) => {
+
+    let json = JSON.parse(foto);
+
+    console.log(json)
+
+    if(json.length > 0){
+
+      return `${process.env.REACT_APP_API}/${json[0].ruta}`;
+
+    }
+
+  }
+
+useEffect(() => {
+  obtenerbooks()
+}, []);
+
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
+          <div className='block sm:hidden'><br /><br /><br /></div>
+
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-2">
             Biblioteca Digital
           </h1>
@@ -79,14 +90,14 @@ function Books() {
             Explora nuestra colección de libros clásicos
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
           {books.map((book) => (
             <BookCard
-              key={book.id}
-              title={book.title}
-              author={book.author}
-              thumbnail={book.thumbnail}
-              downloadUrl={book.downloadUrl}
+              key={book.ID}
+              title={book.Titulo}
+              author={book.Autor}
+              thumbnail={obtenerfoto(book.Images)}
+              downloadUrl={obtenerfoto(book.Fotos)}
             />
           ))}
         </div>

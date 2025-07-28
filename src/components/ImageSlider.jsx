@@ -4,28 +4,23 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const images = [
   {
     url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg2.jpg?alt=media&token=a19a8985-b53d-41b6-ade1-6470e94b513f",
-    title: "Imagen 1",
-    description: "Esta es una descripción extendida de la imagen 1.",
+    title: "Clamor por los Hermanos",
+    description: "El clamor por los hermanos nace del amor ágape, ese amor incondicional y sacrificial que Cristo demostró por nosotros. Cuando clamamos, estamos demostrando que nos importa profundamente el bienestar espiritual, emocional y físico de nuestros hermanos en la fe.",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg3.jpg?alt=media&token=5dcc2956-ea6c-4887-8d91-4ebe0a286118",
-    title: "Imagen 2",
-    description: "Esta es una descripción extendida de la imagen 2.",
+    title: "Presentación de los Niños a Dios",
+    description: "Los padres reconocen que sus hijos son un regalo de Dios (Salmo 127:3) y los entregan de vuelta a Él, reconociendo Su soberanía sobre sus vidas.",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg4.jpg?alt=media&token=72b23330-5258-4c0b-9b4c-e9661981ac7d",
-    title: "Imagen 3",
-    description: "Esta es una descripción extendida de la imagen 3.",
+    title: "Alabanza y Adoración",
+    description: "En la iglesia pentecostal, la alabanza y adoración son mucho más que un segmento del servicio dominical; son la esencia de la comunión con Dios, una expresión vital de fe y una poderosa herramienta espiritual. Se caracterizan por su espontaneidad, fervor y la búsqueda de la manifestación del Espíritu Santo.",
   },
   {
     url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg1.jpg?alt=media&token=522ba86e-9418-4e99-aa2a-0ba275a96423",
-    title: "Imagen 4",
-    description: "Esta es una descripción extendida de la imagen 4.",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cabi-wash-web.appspot.com/o/aposento%2Faniversario%2Fimg1.jpg?alt=media&token=522ba86e-9418-4e99-aa2a-0ba275a96423",
-    title: "Imagen 5",
-    description: "Esta es una descripción extendida de la imagen 5.",
+    title: "Nuestro Templo",
+    description: "Estos templos fueron cruciales para la historia de Israel y la revelación de Dios, preparando el camino para una comprensión más profunda: que la verdadera morada de Dios no sería de piedra y oro, sino en el cuerpo de Jesús y, posteriormente, en el corazón de cada creyente y en la comunidad de la iglesia a través del Espíritu Santo.",
   },
 ];
 

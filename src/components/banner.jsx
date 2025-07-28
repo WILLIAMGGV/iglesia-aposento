@@ -33,11 +33,7 @@ const Banner = () => {
           </p>
         </span>
 
-        <a href="#" className="self-end">
-          <span className="mt-6 bg-black p-2 rounded-lg text-sm bg-opacity-70 text-white hover:font-bold hover:text-gray-900 hover:bg-[#cc9933] cursor-pointer">
-            Más Información
-          </span>
-        </a>
+      
       </div>
 
       {/* Texto para móviles */}
@@ -55,11 +51,7 @@ const Banner = () => {
           </p>
         </span>
 
-        <div id="botonc2" className="mt-4">
-          <span className="bg-black p-2 rounded-lg text-sm bg-opacity-70 text-white hover:font-bold hover:text-gray-900 hover:bg-[#cc9933] cursor-pointer">
-            Más Información
-          </span>
-        </div>
+    
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import imgfondoraya from '../img/fondoraya.png'
 import imgtransmision from "../img/envivo.gif"
 import ReactPlayer from 'react-player'
@@ -6,8 +6,32 @@ import ReactPlayer from 'react-player'
 const Transmision = () => {
   const [urlyoutube, setUrlyoutube] = useState('https://www.youtube.com/watch?v=tkawZEXXhlk')
 
+
+  const obtenerlink = async () => {
+
+    try {
+        const response = await fetch(`${process.env.REACT_APP_API}/obtenerlink`);
+        if (!response.ok) {
+            throw new Error('Error en la red');
+        }
+        const data = await response.json();
+        if(data.message){
+            setUrlyoutube(data.message);
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+
+  }
+
+  useEffect(() => {
+    obtenerlink()
+  }, []);
+
+
   return (
     <>
+   <div className='block sm:hidden'><br /><br /><br /></div>
       <div
         id="trasmitir"
         style={{ backgroundImage: `url(${imgfondoraya})` }}

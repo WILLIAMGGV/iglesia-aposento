@@ -1,30 +1,51 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 
-const events = [
-  {
-    id: 1,
-    title: "Conferencia de Innovación 2025",
-    description: "Explora las últimas tendencias tecnológicas con líderes de la industria.",
-    date: "15 de julio, 2025",
-    image: "https://res.cloudinary.com/dpkvjgcm8/image/upload/v1749130838/flyer_vvrknb.jpg",
-  },
-  {
-    id: 2,
-    title: "Taller de Productividad",
-    description: "Aprende técnicas para mejorar tu desempeño profesional.",
-    date: "22 de julio, 2025",
-    image: "https://res.cloudinary.com/dpkvjgcm8/image/upload/v1749130838/evento1_vocfvm.jpg",
-  },
-  {
-    id: 3,
-    title: "Networking Empresarial",
-    description: "Conecta con emprendedores y empresarios de todo el país.",
-    date: "5 de agosto, 2025",
-    image: "https://res.cloudinary.com/dpkvjgcm8/image/upload/v1749130838/evento2_h9zc4m.jpg",
-  },
-];
+
 
 export default function HomeEventsSection() {
+
+
+  const [eventos, setEventos] = useState([]);
+
+  const obtenereventos = async () => {
+
+    try {
+        const response = await fetch(`${process.env.REACT_APP_API}/obtenereventos/`);
+        if (!response.ok) {
+            throw new Error('Error en la red');
+        }
+        const data = await response.json();
+        if(data){
+            setEventos(data);
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+
+  }
+
+
+  const obtenerfoto = (foto) => {
+
+    let json = JSON.parse(foto);
+
+    console.log(json)
+
+    if(json.length > 0){
+
+      return `${process.env.REACT_APP_API}/${json[0].ruta}`;
+
+    }
+
+  }
+
+
+  useEffect(() => {
+        obtenereventos()
+      }, []);
+  
+
+
   return (
     <section className="bg-gradient-to-b from-gray-100 to-gray-300 py-12 px-4 sm:px-6 lg:px-8">
       {/* Título superior */}
@@ -32,22 +53,39 @@ export default function HomeEventsSection() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
         {/* Columna izquierda: Evento principal */}
-        <div className="relative w-full h-full min-h-[600px] rounded-xl overflow-hidden shadow-lg">
+
+        {eventos.length > 0 ? (<div className="relative w-full h-full min-h-[700px] rounded-xl overflow-hidden shadow-lg">
           <img
-            src="https://res.cloudinary.com/dpkvjgcm8/image/upload/v1749130838/flyer_vvrknb.jpg"
-            alt="Flyer Principal"
+            src={`${obtenerfoto(eventos[0].Foto)}`}
+            alt={eventos[0].Titulo}
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/30" />
           <div className="absolute bottom-0 w-full p-6 bg-black/60 text-white">
-            <h2 className="text-2xl md:text-3xl font-bold">Evento Principal: Cumbre Global 2025</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">{eventos[0].Titulo}</h2>
             <p className="mt-2 text-sm md:text-base">
-              Acompáñanos en la conferencia más importante del año sobre negocios y tecnología.
+              {eventos[0].Descripcion}
             </p>
           </div>
-        </div>
+        </div>) : (<></>)}
+        
 
-        {/* Columna derecha: Cards de eventos */}
+         {eventos.length > 1 ? (<div className="relative w-full h-full min-h-[700px] rounded-xl overflow-hidden shadow-lg">
+          <img
+            src={`${obtenerfoto(eventos[1].Foto)}`}
+            alt={eventos[1].Titulo}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute bottom-0 w-full p-6 bg-black/60 text-white">
+            <h2 className="text-2xl md:text-3xl font-bold">{eventos[1].Titulo}</h2>
+            <p className="mt-2 text-sm md:text-base">
+              {eventos[1].Descripcion}
+            </p>
+          </div>
+        </div>) : (<></>)}
+
+        {/* Columna derecha: Cards de eventos
         <div className="flex flex-col gap-6">
           {events.map((event) => (
             <div
@@ -67,7 +105,7 @@ export default function HomeEventsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

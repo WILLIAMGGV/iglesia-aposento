@@ -8,6 +8,10 @@ import Videos from "./components/videos";
 import Books from "./components/books";
 import Transmision from "./components/transmision";
 import Contact from "./components/contact";
+import Mision from "./components/mision";
+import Menufixed from "./components/menufixed";
+import Galeria from "./components/galeria";
+import Vergalerias from "./components/vergalerias";
 
 function App() {
   const funcion1 = () => {
@@ -29,174 +33,8 @@ function App() {
 
   return (
     <div className="bg-gray-50">
-      <header class="header block sm:block md:block lg:hidden xl:hidden 2xl:hidden">
-        <nav class="nav container2">
-          <div class="nav__data">
-            <a href="#" class="nav__logo">
-              <img src="img/logo.png" width="120px" alt="" />
-            </a>
+      <Menufixed idioma="es" />
 
-            <div class="nav__toggle" id="nav-toggle">
-              <i class="ri-menu-line nav__burger"></i>
-              <i class="ri-close-line nav__close"></i>
-            </div>
-          </div>
-
-          <div class="nav__menu" id="nav-menu">
-            <ul class="nav__list">
-              <li>
-                <a href="#" class="nav__link">
-                  Inicio
-                </a>
-              </li>
-
-              <li class="dropdown__item">
-                <div class="nav__link">
-                  <a href="#serviciosmenu">Nuestros Servicios</a>
-                  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                </div>
-
-                <ul class="dropdown__menu">
-                  <li>
-                    <a href="obamacare.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> OBAMACARE
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="medicare.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> MEDICARE
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="dentalvision.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PLANES DE SEGURO
-                      DENTAL Y VISIÓN
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="life.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PÓLIZAS DE VIDA
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="accidental.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PÓLIZAS
-                      ACCIDENTALES
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="indocument.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PLANES DE
-                      DESCUENTO PARA INDOCUMENTADOS
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="auto.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PÓLIZAS DE AUTO
-                    </a>
-                  </li>
-
-                  <li>
-                    <a href="home.html" class="dropdown__link">
-                      <i class="ri-checkbox-circle-fill"></i> PÓLIZAS DE HOME
-                    </a>
-                  </li>
-
-                  <li class="dropdown__subitem">
-                    <div class="dropdown__link">
-                      <i class="ri-bar-chart-line"></i> Reports
-                      <i class="ri-add-line dropdown__add"></i>
-                    </div>
-
-                    <ul class="dropdown__submenu">
-                      <li>
-                        <a href="#" class="dropdown__sublink">
-                          <i class="ri-file-list-line"></i> Documents
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#" class="dropdown__sublink">
-                          <i class="ri-cash-line"></i> Payments
-                        </a>
-                      </li>
-
-                      <li>
-                        <a href="#" class="dropdown__sublink">
-                          <i class="ri-refund-2-line"></i> Refunds
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li>
-                <a href="#testimonialmenu" class="nav__link">
-                  Testimonios
-                </a>
-              </li>
-
-              <li>
-                <a href="#acercademenu" class="nav__link">
-                  Acerca de Mi
-                </a>
-              </li>
-
-              <li>
-                <a href="#contactomenu" class="nav__link">
-                  Contacto
-                </a>
-              </li>
-
-              <li class="dropdown__item">
-                <div class="nav__link">
-                  Nuestras Redes
-                  <i class="ri-arrow-down-s-line dropdown__arrow"></i>
-                </div>
-
-                <ul class="dropdown__menu">
-                  <li>
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100083282203525"
-                      target="_blank"
-                      class="dropdown__link"
-                    >
-                      <i class="ri-facebook-circle-fill"></i> FACEBOOK
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://www.instagram.com/royalinsuranceusa"
-                      target="_blank"
-                      class="dropdown__link"
-                    >
-                      <i class="ri-instagram-fill"></i> INSTAGRAM
-                    </a>
-                  </li>
-
-                  <li>
-                    <a
-                      href="https://wa.me/19545489316"
-                      target="_blank"
-                      class="dropdown__link"
-                    >
-                      <i class="ri-whatsapp-fill"></i> WHATSAPP
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
       <div
         id="iniciomenu"
         class="hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
@@ -222,6 +60,19 @@ function App() {
                 </a>
               </span>
             </span>
+
+            <span class="p-4 hover:cursor-pointer hover:font-bold">
+              <span class="underline2 texto-azul-oscuro">
+                <a
+                  style={{ cursor: "pointer" }}
+                  onClick={() => {
+                    cargapage("/#/biblia");
+                  }}
+                >
+                  Biblia Online
+                </a>
+              </span>
+            </span>
             <div
               id="menuservice"
               onMouseOut={funcion2}
@@ -232,7 +83,7 @@ function App() {
                 onMouseOver={funcion1}
                 class="underline2 texto-azul-oscuro"
               >
-                <a href="#serviciosmenu">Recursos</a>
+                <a href="#">Recursos</a>
               </span>
               <div
                 id="submenu"
@@ -259,9 +110,6 @@ function App() {
                     >
                       LIBROS
                     </a>
-                  </span>
-                  <span id="menu3" class="hover:font-bold">
-                    <a href="/">LA BIBLIA ONLINE</a>
                   </span>
                 </div>
 
@@ -390,11 +238,14 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/predica" element={<Predica />} />
+          <Route path="/predica/:id" element={<Predica />} />
+          <Route path="/galeria/:id" element={<Galeria />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/books" element={<Books />} />
           <Route path="/contacto" element={<Contact />} />
           <Route path="/transmision" element={<Transmision />} />
+          <Route path="/mision" element={<Mision />} />
+          <Route path="/vergalerias" element={<Vergalerias />} />
         </Routes>
       </HashRouter>
 
