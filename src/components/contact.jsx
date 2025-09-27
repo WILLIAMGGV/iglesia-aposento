@@ -44,13 +44,14 @@ const Contact = () => {
     <>
       <div className="py-12 px-4 sm:px-6 lg:px-8 bga-gray">
         <div className="max-w-7xl mx-auto">
+          <br /><br />
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">Contáctanos</h2>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Map */}
-            <div className="rounded-lg overflow-hidden shadow-lg h-[600px]">
+            <div className="rounded-lg border-2 border-black overflow-hidden shadow-lg h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125513.38899875447!2d-71.7770441509008!3d10.556197596656304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e8993babb1ac001%3A0x7fa2acf55507dbd9!2sSan%20Francisco%2C%204004%2C%20Zulia!5e0!3m2!1sen!2sve!4v1744911477254!5m2!1sen!2sve"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d288.2908686540764!2d-71.6550463294278!3d10.55092866484978!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e89970059d7985d%3A0x7c8a0305c54bbd6a!2sIGLASIA%20APOSENTO%20ALTO!5e1!3m2!1sen!2sus!4v1758901095306!5m2!1sen!2sus"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -12,6 +12,7 @@ import Mision from "./components/mision";
 import Menufixed from "./components/menufixed";
 import Galeria from "./components/galeria";
 import Vergalerias from "./components/vergalerias";
+import Biblia from "./components/biblia";
 
 function App() {
   const funcion1 = () => {
@@ -153,6 +154,17 @@ function App() {
                 </a>
               </span>
             </span>
+            <span class="p-4 hover:cursor-pointer hover:font-bold">
+              <span class="underline2 texto-azul-oscuro">
+                <a
+                  style={{ cursor: "pointer" }}
+                  href="https://www.google.com"
+                  target="_blank"
+                >
+                  Admin
+                </a>
+              </span>
+            </span>
             <div class="p-4">
               <div class="flex flex-row">
                 <a
@@ -245,6 +257,7 @@ function App() {
           <Route path="/contacto" element={<Contact />} />
           <Route path="/transmision" element={<Transmision />} />
           <Route path="/mision" element={<Mision />} />
+          <Route path="/biblia" element={<Biblia />} />
           <Route path="/vergalerias" element={<Vergalerias />} />
         </Routes>
       </HashRouter>

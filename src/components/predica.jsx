@@ -126,7 +126,7 @@ useEffect(() => {
 
           {/* Blog Content */}
           <article className="bg-white rounded-lg shadow-md p-4 sm:p-6 text-justify">
-            <div className="prose max-w-none" dangerouslySetInnerHTML={{__html: contenido }}>
+            <div className="prose max-w-none text-gray-800"  dangerouslySetInnerHTML={{__html: contenido }}>
      
             </div>
           </article>

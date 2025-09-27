@@ -100,7 +100,7 @@ const Menufixed = ({idioma}) => {
           }}>{idioma == 'es' ? ('Mision y Visión') : ('Mision y Visión')}</span>
 
           <span className="cursor-pointer" onClick={() => { setOpen(false);
-            cargapage("/#/mision");
+            cargapage("/#/biblia");
           }}>{idioma == 'es' ? ('Biblia Online') : ('Biblia Online')}</span>
 
           {/* Toggle de submenú */}
