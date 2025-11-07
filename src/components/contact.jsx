@@ -1,5 +1,8 @@
 import React, {useState} from 'react'
 import { Calendar, Clock, MapPin, Send, CheckCircle, Mail, Phone, User, MessageSquare } from 'lucide-react';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ReactComponent as CorreoIcon } from '../img/thanks.svg';
 
 const Contact = () => {
     const [email, setEmail] = useState('');
@@ -10,7 +13,23 @@ const Contact = () => {
       email: '',
       message: ''
     });
+    const [textboton, setTextboton] = useState("Enviar Mensaje")
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+
+    const notify = () => toast('¡Gracias por suscribirte! Bendiciones', {
+      icon: <CorreoIcon style={{ width: '32px', height: '32px' }} />, // ícono de mensaje o suscripción
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Flip,
+    });
+
   
     const handleSubscribe = (e) => {
       e.preventDefault();
@@ -20,10 +39,40 @@ const Contact = () => {
         setTimeout(() => setIsSubscribed(false), 3000);
       }
     };
+
+    
   
     const handleContactSubmit = (e) => {
       e.preventDefault();
+
+      const data = {
+          'datos': contactForm,
+      };
+       notify()
+      
+      fetch(`${process.env.REACT_APP_API}/enviaremail`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      })
+          .then(response => response.json())
+          .then(result => {
+              if (result) {
+               
+                  if(result.message ==="guardado"){
+                   setIsSubscribed(true);
+      notify()
+      setEmail('');
+      setTextboton("Enviar Mensaje")
+      setTimeout(() => setIsSubscribed(false), 3000);
       setIsSubmitted(true);
+
+
+
+
+
       setContactForm({
         name: '',
         phone: '',
@@ -31,6 +80,20 @@ const Contact = () => {
         message: ''
       });
       setTimeout(() => setIsSubmitted(false), 3000);
+                  } 
+
+                  
+
+              } else {
+                  console.log(result.message);
+              }
+          })
+          .catch(error => {
+              console.log(error);
+          });
+
+      
+      
     };
   
     const handleInputChange = (e) => {
@@ -162,7 +225,7 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
-                      Enviar mensaje
+                     {textboton}
                     </>
                   )}
                 </button>
@@ -186,6 +249,18 @@ const Contact = () => {
           </div>
         </div>
       </div> 
+      <ToastContainer
+      position="top-right"
+      autoClose={5000}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      transition={Flip}
+      />
     </>
   )
 }

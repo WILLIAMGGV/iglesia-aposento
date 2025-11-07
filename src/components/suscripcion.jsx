@@ -1,16 +1,83 @@
 import React, { useState } from 'react'
 import { Send, CheckCircle } from 'lucide-react';
+import { ToastContainer, toast, Flip } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ReactComponent as CorreoIcon } from '../img/thanks.svg';
+
 
 const Suscripcion = () => {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
+  const [textboton, setTextboton] = useState("Suscribirse")
+
+const notify = () => toast('¡Gracias por suscribirte! Bendiciones', {
+  icon: <CorreoIcon style={{ width: '32px', height: '32px' }} />, // ícono de mensaje o suscripción
+  position: "top-center",
+  autoClose: 5000,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+  transition: Flip,
+});
+
+const notify2 = () => toast('¡Ya estabas suscripto, Bendiciones!', {
+  icon: <CorreoIcon style={{ width: '32px', height: '32px' }} />, // ícono de mensaje o suscripción
+  position: "top-center",
+  autoClose: 5000,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "light",
+  transition: Flip,
+});
+
   const handleSubscribe = (e) => {
     e.preventDefault();
     if (email) {
-      setIsSubscribed(true);
+      setTextboton("Suscribiendose...")
+      const data = {
+          'email': email,
+      };
+      fetch(`${process.env.REACT_APP_API}/suscribirse`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+      })
+          .then(response => response.json())
+          .then(result => {
+              if (result) {
+                  if(result.message ==="guardado"){
+                   setIsSubscribed(true);
+      notify()
       setEmail('');
+      setTextboton("Suscribirse")
       setTimeout(() => setIsSubscribed(false), 3000);
+                  } 
+
+                  if(result.message ==="ya existe"){
+                   setIsSubscribed(true);
+      notify2()
+      setEmail('');
+      setTextboton("Suscribirse")
+      setTimeout(() => setIsSubscribed(false), 3000);
+                  } 
+
+              } else {
+                  console.log(result.message);
+              }
+          })
+          .catch(error => {
+              console.log(error);
+          });
+
+
+      
     }
   };
 
@@ -56,11 +123,12 @@ const Suscripcion = () => {
             ) : (
               <>
                 <Send className="w-5 h-5 mr-2" />
-                Suscribirse
+                {textboton}
               </>
             )}
           </button>
         </form>
+       
       </div>
     </div>
   );

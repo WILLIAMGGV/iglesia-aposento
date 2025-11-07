@@ -139,7 +139,7 @@ const Menufixed = ({idioma}) => {
             </div>
           </div>
 
-          <a href="https://aposento.bingoarcoiris.com" target="_blank"><span onClick={() => setOpen(false)}>{idioma == 'es' ? ('Administrar Sitio') : ('Administrar Sitio')}</span></a>
+          <a href="https://admin.organizacionaposentoalto.com" target="_blank"><span onClick={() => setOpen(false)}>{idioma == 'es' ? ('Administrar Sitio') : ('Administrar Sitio')}</span></a>
         </div>
       </div>
       </div>

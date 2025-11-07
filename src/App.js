@@ -158,7 +158,7 @@ function App() {
               <span class="underline2 texto-azul-oscuro">
                 <a
                   style={{ cursor: "pointer" }}
-                  href="https://www.google.com"
+                  href="https://admin.organizacionaposentoalto.com"
                   target="_blank"
                 >
                   Admin
